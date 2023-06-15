@@ -8,10 +8,22 @@ that has been submitted to Neuropsychopharmocology 2023.
 
 This package included the RStan code for the computaional modeling of probabilistic reversal learning task in four experiments. 
 
-1) Serotonin depletion in rats;
-2) Acute SSRI with low/high dose in rats;
-3) Repeated and sub-chronic SSRI in rats;
-4) Acute SSRI in humans.
+1) Serotonin depletion in rats;            /ratDHT
+2) Acute SSRI with low/high dose in rats;  /ratLowHighDose
+3) Repeated and sub-chronic SSRI in rats;  /ratRepChro
+4) Acute SSRI in humans.                   /humanSSRI
+
+The models are coded in reversals_x.stan & data.stan & constants.stan
+The individualized versions of the models are coded by reversals_xs.stan
+The models are fitted by bayesian_reversals_xxx.R
+The method for model simulations is provided in /support/toolkits.R
+The comparisons between simulations and empirical data are condcted by readCSVcompare_xxx.R
+
+
+R version 4.1.3 (2022-03-10) and a few libraries
+rstan version 2.26.11 (Stan version 2.26.1)
+Custermized tools and functions are provided in the folder support/
+
 
 The code was adpated by Dr. Qiang Luo from the codes written by Dr. Rudolf Cardinal in 2017 for the following paper
 Kanen JW, Ersche KD, Fineberg NA, Robbins TW, Cardinal RN. 
